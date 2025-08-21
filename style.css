@@ -1,0 +1,75 @@
+body{
+    text-align: center;
+    background-color: rgb(202, 196, 255);
+}
+.btn{
+    height: 200px;
+    width: 200px;
+    border:10px solid  black;
+    border-radius: 20%;
+    margin: 2rem;
+    cursor: pointer;
+    
+    transition: transform 0.1s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0,0,0.3);
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    
+}
+.red{
+    background-color: rgba(255, 0, 0, 0.616);
+}
+.yellow{
+    background-color: rgba(196, 196, 5, 0.651);
+
+}
+.green{
+    background-color: rgba(9, 175, 175, 0.7);
+
+}
+.purple{
+    background-color: rgba(128, 41, 128, 0.719);
+}
+.gameflash {
+     background-color: white;
+     animation: flash 0.3s ease;
+}
+.userflash{
+    background-color: rgb(15, 236, 8);
+    animation:flashUser 0.3s ease;
+}
+.btn:active{
+    transform: scale(0.75);
+}
+@keyframes flash{
+    0%{background-color: white;}
+    100%{
+     transform: scale(1.05);
+    }
+}
+
+.shake {
+    animation: shake 0.4s ease;
+}
+@keyframes flashUser{
+    0%{background-color: rgb(15, 236, 8);}
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+.level-pop{
+    animation:popIn 0.4s ease-in-out;
+}
+@keyframes popIn{
+    0%{
+        transform: scale(0.8);opacity: 0;
+    }
+    50%{transform: scale(1.2);opacity: 1;}
+    100%{transform: scale(1);}
+}
